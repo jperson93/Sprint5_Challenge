@@ -1,3 +1,7 @@
+import axios from 'axios';
+
+document.querySelector('header-container').appendChild(Header);
+
 const Header = (title, date, temp) => {
   // TASK 1
   // ---------------------
@@ -11,6 +15,25 @@ const Header = (title, date, temp) => {
   //    <span class="temp">{ temp }</span>
   //  </div>
   //
+
+  const header = document.createElement('div');
+  const dateCard = document.createElement('span');
+  const titleCard = document.createElement('h1');
+  const tempCard = document.createElement('span'); 
+
+  header.classList.add('header'); 
+  dateCard.classList.add('date');
+  tempCard.classList.add('temp');
+
+  titleCard.textContent = title.title; 
+  dateCard.textContent = date.date;
+  tempCard.textContent = temp.temp;
+
+  header.appendChild(dateCard);
+  header.appendChild(titleCard);
+  header.appendChild(tempCard);
+
+  return header;
 }
 
 const headerAppender = (selector) => {

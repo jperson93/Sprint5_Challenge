@@ -1,8 +1,7 @@
-import axios from 'axios';
 
-document.querySelector('header-container').appendChild(Header);
 
 const Header = (title, date, temp) => {
+  
   // TASK 1
   // ---------------------
   // Implement this function taking `title`, `date` and `temp` as its 3 args and returning the markup below.
@@ -25,16 +24,24 @@ const Header = (title, date, temp) => {
   dateCard.classList.add('date');
   tempCard.classList.add('temp');
 
-  titleCard.textContent = title.title; 
-  dateCard.textContent = date.date;
-  tempCard.textContent = temp.temp;
+
+  titleCard.textContent = 'Bloomtech Times'; 
+  dateCard.textContent = 'January 6, 2021';
+  tempCard.textContent = '26 degrees';
 
   header.appendChild(dateCard);
   header.appendChild(titleCard);
   header.appendChild(tempCard);
 
+  document.querySelector('.header-container').appendChild(header);
+
   return header;
+
+  
 }
+
+
+
 
 const headerAppender = (selector) => {
   // TASK 2
